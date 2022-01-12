@@ -76,10 +76,10 @@ Veieu
     <br>
     <center>
         <h1>You are logged in!</h1>
-        <button onclick="render_search(null,null,null,null,null,null,null,null,null,null);" class="btn btn-primary stretched-link"">Search</button>
+        <button onclick="render_search(null,null,null,null,null,null,null,null,null,null);" class="btn btn-primary">Search</button>
         <br>
         <br>
-        <button onclick="math_render(null);" class="btn btn-danger stretched-link">Math</button>
+        <button onclick="math_render(null);" class="btn btn-danger">Math</button>
     </center>
 </body>
 </html>
@@ -213,7 +213,8 @@ function render_search(url1,url2,url3,url4,url5,url6,url7,url8,url9,url10) {
         <p>Query:</p>
         <input type="text" name="query" id="query" required>
         <br>
-        <input type="submit" value="Submit" onclick="searchlogic();">
+        <input type="submit" value="Submit" onclick="searchlogic();" class="btn btn-success">
+        <br>
         <p>Result:</p>
 
         <div id="result">
@@ -306,7 +307,7 @@ function math_render(result) {
         <p>Second Number:</p>
         <input type="number" name="secondnum" id="secondnum">
         <br>
-        <input type="submit" value="submit" onclick="math_logic();">
+        <input type="submit" value="submit" onclick="math_logic();" class="btn btn-success">
 
 <br>
 <p>
