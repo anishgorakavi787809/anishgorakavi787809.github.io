@@ -139,7 +139,9 @@ function init( error, success ) {
            <input type="submit" value="submit" onclick="accountverification();" class="btn btn-success btn-lg">
    <br>
        <br>
-       <a href="#" onclick="signup_render();" class="btn btn-primary stretched-link">Sign up!</a>
+       <br>
+       
+       <a href="#" onclick="signup_render();" class="btn btn-primary stretched-link" >Sign up!</a>
        <br>
 
        ${error}
