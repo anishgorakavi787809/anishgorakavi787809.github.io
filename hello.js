@@ -56,6 +56,7 @@ init(null,null);
 function portal() {
 if (localStorage.getItem("uname&pword") != null) {
 document.getElementById("lol").innerHTML = `
+Veieu
 <!DOCTYPE html>
 <html lang="en">
 <head>
