@@ -1,6 +1,6 @@
 // <script src="index.css"></script>  <!---S-->
 let name = "Anish Gorakavi";
-let serverurl = "http://192.168.1.180:5000";
+let serverurl = "https://day2comp.anishgorakavi.repl.co";
 
 var list = "";
 
