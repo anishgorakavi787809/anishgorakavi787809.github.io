@@ -75,9 +75,10 @@ document.getElementById("lol").innerHTML = `
     <br>
     <center>
         <h1>You are logged in!</h1>
-        <a href="#" onclick="render_search(null,null,null,null,null,null,null,null,null,null);">Search</a>
+        <a href="#" onclick="render_search(null,null,null,null,null,null,null,null,null,null);" class="btn btn-primary stretched-link"">Search</a>
         <br>
-        <a href="#" onclick="math_render(null);">Math</a>
+        <br>
+        <a href="#" onclick="math_render(null);" class="btn btn-danger stretched-link">Math</a>
     </center>
 </body>
 </html>
@@ -138,10 +139,9 @@ function init( error, success ) {
            <input type="submit" value="submit" onclick="accountverification();" class="btn btn-success btn-lg">
    <br>
        <br>
-       <a href="#" onclick="signup_render();">Sign up!</a>
+       <a href="#" onclick="signup_render();" class="btn btn-primary stretched-link">Sign up!</a>
        <br>
-       <a href="#">Forgot password?</a>
-       <br>
+
        ${error}
        <p style="color: rgb(69, 228, 69);">${success}</p>
        <br>
