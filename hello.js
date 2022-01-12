@@ -75,10 +75,10 @@ document.getElementById("lol").innerHTML = `
     <br>
     <center>
         <h1>You are logged in!</h1>
-        <a href="#" onclick="render_search(null,null,null,null,null,null,null,null,null,null);" class="btn btn-primary stretched-link"">Search</a>
+        <button onclick="render_search(null,null,null,null,null,null,null,null,null,null);" class="btn btn-primary stretched-link"">Search</button>
         <br>
         <br>
-        <a href="#" onclick="math_render(null);" class="btn btn-danger stretched-link">Math</a>
+        <button onclick="math_render(null);" class="btn btn-danger stretched-link">Math</button>
     </center>
 </body>
 </html>
@@ -141,7 +141,7 @@ function init( error, success ) {
        <br>
        <br>
        
-       <button onclick="signup_render();" class="btn btn-primary btn-lg" >Sign up!</a>
+       <button onclick="signup_render();" class="btn btn-primary btn-lg" >Sign up!</button>
        <br>
 
        ${error}
