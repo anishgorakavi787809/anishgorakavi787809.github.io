@@ -141,7 +141,7 @@ function init( error, success ) {
        <br>
        <br>
        
-       <a href="#" onclick="signup_render();" class="btn btn-primary stretched-link" >Sign up!</a>
+       <a href="#" onclick="signup_render();" class="btn btn-primary btn-lg" >Sign up!</a>
        <br>
 
        ${error}
