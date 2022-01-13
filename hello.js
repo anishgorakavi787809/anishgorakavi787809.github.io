@@ -4,27 +4,13 @@ let serverurl = "https://day2comp.anishgorakavi.repl.co";
 
 var list = "";
 
-let clienturl = "https://anishgorakavi787809.github.io/";
+let clienturl = "https://anishgorakavi787809.github.io";
 
 function addmessage(stuff) {
     list = stuff;
 }
 function routes() {
-    if( window.location.href == clienturl || window.location.href == clienturl + "#") {
-        init(null,null);
-    }
-    else if (window.location.href == clienturl + "#portal") {
-        portal();
-    }
-    else if(window.location.href == clienturl + "#math") {
-        math_render(null);
-    }
-    else if(window.location.href == clienturl + "#search") {
-        render_search(null,null,null,null,null,null,null,null,null,null);
-    }
-    else {
-        document.getElementById('lol').innerHTML = "<h1>404 NOT FOUND!!!!!!!!!!!</h1>"
-    }
+    init(null,null)
 }
 //Sends request to server to autherizize user
 function accountverification() {
