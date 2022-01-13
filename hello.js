@@ -4,10 +4,28 @@ let serverurl = "https://day2comp.anishgorakavi.repl.co";
 
 var list = "";
 
+let clienturl = "https://anishgorakavi787809.github.io";
+
 function addmessage(stuff) {
     list = stuff;
 }
-
+function routes() {
+    if( window.location.href == clienturl || window.location.href == clienturl + "#") {
+        init(null,null);
+    }
+    else if (window.location.href == clienturl + "#portal") {
+        portal();
+    }
+    else if(window.location.href == clienturl + "#math") {
+        math_render(null);
+    }
+    else if(window.location.href == clienturl + "#search") {
+        render_search(null,null,null,null,null,null,null,null,null,null);
+    }
+    else {
+        document.getElementById('lol').innerHTML = "<h1>404 NOT FOUND!!!!!!!!!!!</h1>"
+    }
+}
 //Sends request to server to autherizize user
 function accountverification() {
     let uname = document.getElementById("username").value;
@@ -76,10 +94,10 @@ Veieu
     <br>
     <center>
         <h1>You are logged in!</h1>
-        <button onclick="render_search(null,null,null,null,null,null,null,null,null,null);" class="btn btn-primary">Search</button>
+        <a href="#search" <button onclick="render_search(null,null,null,null,null,null,null,null,null,null);" class="btn btn-primary">Search</button></a>
         <br>
         <br>
-        <button onclick="math_render(null);" class="btn btn-danger">Math</button>
+        <a href="#math"><button onclick="math_render(null);" class="btn btn-danger">Math</button></a>
     </center>
 </body>
 </html>
@@ -137,7 +155,9 @@ function init( error, success ) {
            <br>
            <br>
            </div>
-           <input type="submit" value="submit" onclick="accountverification();" class="btn btn-success btn-lg">
+           
+           <a href="#portal"><input type="submit" value="submit" onclick="accountverification();" class="btn btn-success btn-lg"></a>
+           
    <br>
        <br>
        <br>
@@ -160,6 +180,7 @@ function init( error, success ) {
 }
 
 function render_search(url1,url2,url3,url4,url5,url6,url7,url8,url9,url10) {
+    if (localStorage.getItem("uname&pword") != null ) {
     if (url1 == null){
         url1 = ""
     }
@@ -244,7 +265,10 @@ function render_search(url1,url2,url3,url4,url5,url6,url7,url8,url9,url10) {
 </html>
     `;
 }
-
+else {
+    init(null,null);
+}
+}
 function searchlogic() {
     let query = document.getElementById("query").value;
 
@@ -269,6 +293,7 @@ function searchlogic() {
 }
 
 function math_render(result) {
+    if (localStorage.getItem("uname&pword") != null ) {
     if (result == null) {
         result = "";
     }
@@ -321,7 +346,10 @@ function math_render(result) {
 
     `;
 }
-
+else {
+    init(null,null);
+}
+}
 function math_logic() {
     console.log(document.getElementById('firstnum').value)
     console.log(document.getElementById('secondnum').value)
