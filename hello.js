@@ -4,7 +4,7 @@ let serverurl = "https://day2comp.anishgorakavi.repl.co";
 
 var list = "";
 
-let clienturl = "https://anishgorakavi787809.github.io";
+let clienturl = "https://anishgorakavi787809.github.io/";
 
 function addmessage(stuff) {
     list = stuff;
